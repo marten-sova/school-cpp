@@ -1,0 +1,92 @@
+== Programming Assignment ==
+
+For this assignment you will write a program that reads in climate data
+(imagine it is coming from a weather station) and stores that data in a linked
+list. After reading and storing all of the data your program will generate a
+report from the data. 
+
+The objective of this assignment is to learn how to implement a linked list
+and to gain familiarity with using a linked list in solving a problem. Since
+one of the objectives is to learn how to implement a linked list you cannot
+use the STL linked list or any other premade linked list.
+
+Your program should use good design methodologies. This means that you should
+have separate classes for each of the following:
+
+- datalogger -- This class represents the "business logic" of adding data to
+  the storage. This is the only class that weatherlog.cpp knows about and it
+  expects three methods: addData(), removeData() and printReport().
+- linkedlist -- This class should implement a linked list. This class should
+  be distinct from the datalogger class (although I would expect datalogger to
+  have a data member that is a linkedlist object).
+- weatherdata -- This class encapsulates the weather data (time, temperature,
+  windspeed).
+
+You are welcome to create any additional classes that you need.
+
+Below are the specific external and internal requirements for this assignment
+as well as design guidelines. Your program will be evaluated based on these
+requirements. The rubric.txt file with this assignment shows how I will
+evaluate the program.
+
+== External Requirements ==
+
+- The main driver (weatherlog.cpp) reads a data file of climate data. It
+  maintains two data logs. One contains all of the data and the other contains
+  the data with all duplicate timestamps removed. Once all of the data is read
+  in, the main function calls the function to display a report on the data for
+  both data logs.
+- The report includes:
+  - a line that states the report title
+  - a line that states the time range of the entries
+  - a line with the number of data entries
+  - lines that count the number of entries with values less than or greater
+    than a specified value.
+  - lines that contain the most common windspeed and temperatures.
+  - lines that show the average temperature and windspeed in 10 timestamp
+    intervals
+  - see the provided "expected.txt" to see the EXACT report format
+
+== Internal Requirements ==
+
+- The program must use the supplied weatherlog.cpp file, unmodified, as the
+  main driver.
+- All of the weather data must be stored in a linked list.
+- The linked list must have three separate "chains". One that keeps the data
+  ordered by timestamp, one that keeps the data ordered by temperature, and
+  one that keeps the data ordered by windspeed. Note that having three
+  separate linked lists, one per measurement type, is not acceptable.
+- Strings must be represented using char* variables, not std::string.
+- The timestamp, temperature, and windspeed data should be stored as integers.
+- The temperature data represents the temperature*10. When you print it out,
+  divide by 10 and show 1 digit of precision to the right of the decimal
+  point.
+- The windspeed data represents the windspeed*100. When you print it out,
+  divide by 100 and show 2 digits of precision to the right of the decimal
+  point.
+- Your program must have no memory leaks or memory errors as reported by
+  valgrind.
+- If any of your classes have pointer data members then the class must either
+  provide a copy constructor, assignment operator, and destructor or it must
+  explicitly remove those methods from the class.
+- The program must be able to run using the "climatedata.txt" input data file
+  in less than 5 seconds on the PCC linux server.
+
+== Design Guidelines ==
+
+- The most important design decision is to use a separate class for the
+  datalogger, linkedlist, and weatherdata classes, as described above.
+- The datalogger will need to have a linkedlist class member but there should
+  be no "linked list" knowledge in the datalogger. For example, the datalogger
+  shouldn't have access to "nodes" in the linked list or use the "next"
+  pointers. All interaction with the linkedlist list object should be via the
+  linkedlist APIs (that you define) but should hide the mechanics of how a
+  linked list works from the datalogger.
+- The linkedlist should not print any information to the screen. The
+  linkedlist is just a data storage mechanism and it shouldn't know, or care,
+  how its data is being used. All of the printing for the report needs to be
+  done in the datalogger class. 
+- The value limits (-50C, 25 m/s, etc.) should NOT be coded into the
+  linkedlist. They belong in the datalogger and should be passed to
+  appropriate methods in the linked list.  
+

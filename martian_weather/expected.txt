@@ -1,0 +1,69 @@
+                                  -- Data Report (raw data) --
+Time range:	        1480906168 - 1480950524
+Number of entries                                      10000
+Number of entries with < -50C temperature               1437
+Number of entries with > 0C temperature                  985
+Most common temperature                                -12.1
+
+Number of entries with 0 windspeed                       205
+Number of entries with > 25 m/s windspeed                447
+Most common windspeed                                      0
+
+Average temperature over ranges
+0 through 999      -645
+1000 through 1999      -492
+2000 through 2999      -373
+3000 through 3999      -294
+4000 through 4999      -241
+5000 through 5999      -185
+6000 through 6999      -131
+7000 through 7999       -82
+8000 through 8999       -29
+9000 through 9999        36
+
+Average windspeed over ranges
+0 through 999        79
+1000 through 1999       289
+2000 through 2999       455
+3000 through 3999       598
+4000 through 4999       746
+5000 through 5999       933
+6000 through 6999      1238
+7000 through 7999      1529
+8000 through 8999      1900
+9000 through 9999      2461
+
+                                  -- Data Report (clean data) --
+Time range:	        1480906175 - 1480950515
+Number of entries                                       8075
+Number of entries with < -50C temperature               1158
+Number of entries with > 0C temperature                  809
+Most common temperature                                -12.1
+
+Number of entries with 0 windspeed                       167
+Number of entries with > 25 m/s windspeed                386
+Most common windspeed                                      0
+
+Average temperature over ranges
+0 through 806      -643
+807 through 1613      -490
+1614 through 2420      -374
+2421 through 3227      -296
+3228 through 4034      -242
+4035 through 4841      -184
+4842 through 5648      -131
+5649 through 6455       -83
+6456 through 7262       -29
+7263 through 8069        37
+
+Average windspeed over ranges
+0 through 806        79
+807 through 1613       293
+1614 through 2420       457
+2421 through 3227       600
+3228 through 4034       749
+4035 through 4841       938
+4842 through 5648      1247
+5649 through 6455      1541
+6456 through 7262      1922
+7263 through 8069      2474

@@ -1,0 +1,42 @@
+Marten Sova
+CS260
+30 June 2019
+
+1) What classes to you intend to create? List each of the classes and provide
+a brief description of the role of that class. This list is not set in
+stone. As you implement your program, if you find that you need additional
+classes that are not in this list, or that something you listed here doesn't
+really fit, that's ok. The point is to start thinking about the high-level
+structure of your program.
+
+dataLogger
+linkedList
+weatherData
+statistics - regarding the data analysis, finding most common values etc
+
+2) Which class do you plan to implement first? Why?
+
+weatherData, since the other classes will deal with it directly or indirectly.
+
+3) What is your algorithm for finding the most common temperature and
+windspeed values?
+
+Since we would have the linked list sorted by both of those variables, could simply iterate through the list tracking the highest count of consecutive common values.
+
+4) One approach to finding all of the values less than -50C is to check each
+value as it is being inserted into the list. If the new value is less than
+-50C then increment a counter. This approach will not work for this
+program. Why not? 
+
+I believe this refers to this line in instructions.txt: "For example, the datalogger shouldn't have access to "nodes" in the linked list"
+
+5) What is your testing strategy? Will you only use the given data file or
+will you create smaller data files to help focus your testing?
+
+I will mainly use a much smaller test data file for testing and debugging early on. Once everything is somewhat functional I will test with the full data set too.
+
+6) What is your strategy for finding and addressing memory leaks? Will you get
+the whole program working first and then address memory leaks or will you
+check on memory leaks as you go?
+
+I intend to get the main structure of the program set up and working, then check the performance periodically.
